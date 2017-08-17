@@ -7,23 +7,62 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  percent: number;
-  options: any;
   constructor() {
-    this.percent = 80;
-    this.options = {
-      barColor: '#ef1e25',
-      trackColor: '#f9f9f9',
-      scaleColor: '#dfe0e0',
-      scaleLength: 5,
-      lineCap: 'round',
-      lineWidth: 3,
-      size: 110,
-      rotate: 0,
-      animate: {
-        duration: 1000,
-        enabled: true
-      }
-    };
+  }
+  ngOnInit() {
+    $('.demo-1').percentcircle();
+
+        $('.demo-2').percentcircle({
+          animate: false,
+          diameter: 100,
+          guage: 3,
+          coverBg: '#fff',
+          bgColor: '#efefef',
+          fillColor: '#E95546',
+          percentSize: '15px',
+          percentWeight: 'normal'
+        });
+
+        $('.demo-3').percentcircle({
+          animate: false,
+          diameter: 100,
+          guage: 3,
+          coverBg: '#fff',
+          bgColor: '#efefef',
+          fillColor: '#DA4453',
+          percentSize: '18px',
+          percentWeight: 'normal'
+        });
+        $('.demo-4').percentcircle({
+          animate: true,
+          diameter: 100,
+          guage: 3,
+          coverBg: '#fff',
+          bgColor: '#efefef',
+          fillColor: '#46CFB0',
+          percentSize: '18px',
+          percentWeight: 'normal'
+        });
+        $('.demo-5').percentcircle({
+          animate: true,
+          diameter: 100,
+          guage: 3,
+          coverBg: '#fff',
+          bgColor: '#efefef',
+          fillColor: '#8BC163',
+          percentSize: '18px',
+          percentWeight: '20px'
+        });
+        $('.demo-6').percentcircle({
+          animate: true,
+          diameter: 100,
+          guage: 10,
+          coverBg: '#fff',
+          bgColor: '#efefef',
+          fillColor: '#D870A9',
+          percentSize: '18px',
+          percentWeight: 'normal'
+        });
+
   }
 }

@@ -21,8 +21,11 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@types/jquery": "^3.2.11",
     "core-js": "^2.4.1",
     "easy-pie-chart": "^2.1.7",
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.100.1",
     "ng2modules-easypiechart": "0.0.4",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.16"
