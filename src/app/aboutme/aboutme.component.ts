@@ -10,6 +10,7 @@ export class AboutmeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+   // $('.parallax').parallax();
   }
 
 }
