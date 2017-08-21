@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { IndexslideComponent } from './indexslide/indexslide.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { SkillComponent } from './skill/skill.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SkillComponent } from './skill/skill.component';
     NavbarComponent,
     IndexslideComponent,
     AboutmeComponent,
-    SkillComponent
+    SkillComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
