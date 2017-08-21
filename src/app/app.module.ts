@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
-import { SkillringComponent } from './skillring/skillring.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IndexslideComponent } from './indexslide/indexslide.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    SkillringComponent,
+
     NavbarComponent,
     IndexslideComponent,
-    AboutmeComponent
+    AboutmeComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,
