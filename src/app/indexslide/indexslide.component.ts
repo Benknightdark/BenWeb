@@ -10,7 +10,10 @@ export class IndexslideComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    $('.slider').slider({
+      height: 1000,
+      indicators: false
+    });
   }
 
 }
