@@ -7,11 +7,26 @@
       <h1 class="header">About Me</h1>
     </div>
   </div>
-  <div class="parallax"><img src="assets/images/1.jpeg" alt="Unsplashed background img 1"></div>
+  <div class="parallax"><img src="assets/images/aboutme.jpeg" alt="Unsplashed background img 1"></div>
 </div>
 <div class="container">
   <div class="section" id="aboutme">
     <div class="row">
+      <div class="col center" [class.s6]="ScreenWidth>1200" [class.s12]="ScreenWidth<1200">
+        <blockquote>
+          <h3 class="left-align">My Story</h3>
+        </blockquote>
+        <blockquote>
+          <h5 class="flow-text">
+            Hello, I’m a Programer from Tainan, Taiwan. I am good at Front-End Web Develope and Hybrid App, and also interested in Big
+            Data , Machine Learning and Deep Learning.
+          </h5>
+        </blockquote>
+      </div>
+      <div class="col center" [class.s6]="ScreenWidth>1200" [class.s12]="ScreenWidth<1200">
+        <img width="50%" src="assets/images/profile.jpg">
+        <!-- class="materialboxed" -->
+      </div>
     </div>
   </div>
 </div>

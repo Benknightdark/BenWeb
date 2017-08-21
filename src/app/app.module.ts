@@ -1,3 +1,4 @@
+import {HttpModule} from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { EasyPieChartModule } from 'ng2modules-easypiechart';
@@ -24,6 +25,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
     RouterModule,
     AppRoutingModule,
     EasyPieChartModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
