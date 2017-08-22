@@ -16,5 +16,4 @@ export class SkillComponent implements OnInit {
       }, 5000);
     });
   }
-
 }
