@@ -1,7 +1,6 @@
 import {HttpModule} from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { EasyPieChartModule } from 'ng2modules-easypiechart';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -28,8 +27,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule,
-    EasyPieChartModule
+    AppRoutingModule
 
   ],
   providers: [],

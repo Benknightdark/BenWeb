@@ -8,7 +8,8 @@
     "build": "ng build --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "delploy":"ng build --prod --aot;firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,7 @@
     "easy-pie-chart": "^2.1.7",
     "jquery": "^3.2.1",
     "materialize-css": "^0.100.1",
+    "materialize-social": "^1.0.0",
     "ng2modules-easypiechart": "0.0.4",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.16"
