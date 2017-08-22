@@ -11,6 +11,7 @@ import { IndexslideComponent } from './indexslide/indexslide.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { SkillComponent } from './skill/skill.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ExperienceComponent } from './experience/experience.component';
     IndexslideComponent,
     AboutmeComponent,
     SkillComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
