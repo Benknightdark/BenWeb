@@ -11,6 +11,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { SkillComponent } from './skill/skill.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
+import { ParallaxComponent } from './shared/parallax/parallax.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactComponent } from './contact/contact.component';
     AboutmeComponent,
     SkillComponent,
     ExperienceComponent,
-    ContactComponent
+    ContactComponent,
+    ParallaxComponent
   ],
   imports: [
     BrowserModule,
