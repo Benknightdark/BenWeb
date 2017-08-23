@@ -17,6 +17,10 @@ export class LayoutComponent implements OnInit {
       draggable: true
     });
     $('.parallax').parallax();
+    $('.slider').slider({
+      height: 1000,
+      indicators: false
+    });
 
     Observable.fromEvent(window, 'resize')
       .map(() => {

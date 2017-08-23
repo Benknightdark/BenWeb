@@ -1,17 +1,6 @@
-<!-- <div class="parallax-container" style="height:30px">
-
-  <div class="section no-pad-bot">
-    <div class="container">
-      <br><br>
-      <h1 class="header yellow-text">Skills</h1>
-    </div>
-  </div>
-  <div class="parallax"><img src="assets/images/skills.jpeg"></div>
-</div> -->
 <app-parallax [title]="'Skills'" [titlecolor]="'yellow'" [imgurl]="'assets/images/skills.jpeg'"></app-parallax>
 <div class="container">
   <div class="section" id="skills">
-
     <div class="row">
       <div class="col left" [class.s6]="ScreenWidth>1200" [class.s12]="ScreenWidth<1200">
         <blockquote>
@@ -24,62 +13,68 @@
         </blockquote>
       </div>
       <div class="col center" [class.s6]="ScreenWidth>1200" [class.s12]="ScreenWidth<1200">
-        <div class="skillbar clearfix " data-percent="80%">
-          <div class="skillbar-title" style="background: #d35400;"><span>.Net MVC</span></div>
-          <div class="skillbar-bar" style="background: #e67e22;"></div>
-          <div class="skill-bar-percent">80%</div>
+        <div *ngFor="let item of chartdata |async">
+          <div class="skillbar clearfix ">
+            <div class="skillbar-title" [style.background]="item?.namecolor">
+              <span>{{item?.name}}</span>
+            </div>
+            <div class="skillbar-bar" [style.background]="item?.scorecolor" [style.width]="item?.score"></div>
+            <div class="skill-bar-percent">{{item?.score}}</div>
+          </div>
         </div>
-        <!-- End Skill Bar -->
+      </div>
+      <!--
+        appSkillbarcolor="item?.score"
+        <div class="col center" [class.s6]="ScreenWidth>1200" [class.s12]="ScreenWidth<1200">
+          <div class="skillbar clearfix " data-percent="80%">
+            <div class="skillbar-title" style="background: #d35400;"><span>.Net MVC</span></div>
+            <div class="skillbar-bar" style="background: #e67e22;"></div>
+            <div class="skill-bar-percent">80%</div>
+          </div>
 
-        <div class="skillbar clearfix " data-percent="70%">
-          <div class="skillbar-title" style="background: #2980b9;"><span>.Net Web API</span></div>
-          <div class="skillbar-bar" style="background: #3498db;"></div>
-          <div class="skill-bar-percent">70%</div>
-        </div>
-         <!-- End Skill Bar -->
+          <div class="skillbar clearfix " data-percent="70%">
+            <div class="skillbar-title" style="background: #2980b9;"><span>.Net Web API</span></div>
+            <div class="skillbar-bar" style="background: #3498db;"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div>
 
-         <div class="skillbar clearfix " data-percent="60%">
+          <div class="skillbar clearfix " data-percent="60%">
             <div class="skillbar-title" style="background:#e67e22"><span>.Net core</span></div>
             <div class="skillbar-bar" style="background: #e67e22;"></div>
             <div class="skill-bar-percent">60%</div>
           </div>
-        <!-- End Skill Bar -->
 
-        <div class="skillbar clearfix " data-percent="70%">
-          <div class="skillbar-title" style="background: #2c3e50;"><span>JavaScript</span></div>
-          <div class="skillbar-bar" style="background: #2c3e50;"></div>
-          <div class="skill-bar-percent">70%</div>
-        </div>
-        <!-- End Skill Bar -->
+          <div class="skillbar clearfix " data-percent="70%">
+            <div class="skillbar-title" style="background: #2c3e50;"><span>JavaScript</span></div>
+            <div class="skillbar-bar" style="background: #2c3e50;"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div>
 
-        <div class="skillbar clearfix " data-percent="75%">
-          <div class="skillbar-title" style="background:#5a68a5;"><span>jQuery</span></div>
-          <div class="skillbar-bar" style="background: #2c3e50;"></div>
-          <div class="skill-bar-percent">75%</div>
-        </div>
-        <!-- End Skill Bar -->
+          <div class="skillbar clearfix " data-percent="75%">
+            <div class="skillbar-title" style="background:#5a68a5;"><span>jQuery</span></div>
+            <div class="skillbar-bar" style="background: #2c3e50;"></div>
+            <div class="skill-bar-percent">75%</div>
+          </div>
 
-        <div class="skillbar clearfix " data-percent="70%">
-          <div class="skillbar-title" style="background: #46465e;"><span>TypeScript</span></div>
-          <div class="skillbar-bar" style="background: #5a68a5;"></div>
-          <div class="skill-bar-percent">70%</div>
-        </div>
-        <!-- End Skill Bar -->
+          <div class="skillbar clearfix " data-percent="70%">
+            <div class="skillbar-title" style="background: #46465e;"><span>TypeScript</span></div>
+            <div class="skillbar-bar" style="background: #5a68a5;"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div>
 
-        <div class="skillbar clearfix " data-percent="75%">
-          <div class="skillbar-title" style="background: #333333;"><span>Angular</span></div>
-          <div class="skillbar-bar" style="background: #525252;"></div>
-          <div class="skill-bar-percent">75%</div>
-        </div>
-        <!-- End Skill Bar -->
+          <div class="skillbar clearfix " data-percent="75%">
+            <div class="skillbar-title" style="background: #333333;"><span>Angular</span></div>
+            <div class="skillbar-bar" style="background: #525252;"></div>
+            <div class="skill-bar-percent">75%</div>
+          </div>
 
-        <div class="skillbar clearfix " data-percent="70%">
-          <div class="skillbar-title" style="background: #27ae60;"><span>Xamarin</span></div>
-          <div class="skillbar-bar" style="background: #2ecc71;"></div>
-          <div class="skill-bar-percent">70%</div>
-        </div>
-        <!-- End Skill Bar -->
-      </div>
+          <div class="skillbar clearfix " data-percent="70%">
+            <div class="skillbar-title" style="background: #27ae60;"><span>Xamarin</span></div>
+            <div class="skillbar-bar" style="background: #2ecc71;"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div>
+
+        </div> -->
     </div>
 
   </div>

@@ -1,3 +1,4 @@
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpModule} from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,8 @@ import { SkillComponent } from './skill/skill.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { ParallaxComponent } from './shared/parallax/parallax.component';
+import { IndexService } from './services/index.service';
+
 
 @NgModule({
   declarations: [
@@ -29,10 +32,12 @@ import { ParallaxComponent } from './shared/parallax/parallax.component';
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    BrowserAnimationsModule
 
   ],
-  providers: [],
+  providers: [IndexService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

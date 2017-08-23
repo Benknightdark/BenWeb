@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IndexService } from '../services/index.service';
+import { Skillbarchart } from '../shared/skillbarchart';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-skill',
@@ -7,13 +10,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SkillComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: IndexService) { }
   @Input() ScreenWidth;
+  chartdata: Observable<Skillbarchart>;
   ngOnInit() {
-    $('.skillbar').each(function () {
-      $(this).find('.skillbar-bar').animate({
-        width: $(this).attr('data-percent')
-      }, 5000);
-    });
+    this.chartdata = this.http.GetskillbarchartData();
+
+
   }
 }

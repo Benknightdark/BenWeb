@@ -1,3 +1,6 @@
+.data-percent{
+
+}
 .skillbar {
 	position:relative;
 	display:block;
@@ -17,7 +20,8 @@
 	-moz-transition-property:width, background-color;
 	-ms-transition-property:width, background-color;
 	-o-transition-property:width, background-color;
-	transition-property:width, background-color;
+  transition-property:width, background-color;
+
 }
 
 .skillbar-title {

@@ -1,0 +1,61 @@
+{
+  "skillbarchart": [
+    {
+      "id": 1,
+      "name": ".Net MVC",
+      "score": "80%",
+      "namecolor":"#d35400",
+      "scorecolor":"#e67e22"
+    },
+    {
+      "id": 2,
+      "name": ".Net Web API",
+      "score": "70%",
+      "namecolor":"#2980b9",
+      "scorecolor":"#3498db"
+    },
+    {
+      "id": 3,
+      "name": ".Net core",
+      "score": "60%",
+      "namecolor":"#e67e22",
+      "scorecolor":"#e67e22"
+    },
+    {
+      "id": 4,
+      "name": "JavaScript",
+      "score": "70%",
+      "namecolor":"#2c3e50",
+      "scorecolor":"#2c3e50"
+    },{
+      "id": 5,
+      "name": "jQuery",
+      "score": "75%",
+      "namecolor":"#5a68a5",
+      "scorecolor":"#2c3e50"
+    },
+    {
+      "id": 6,
+      "name": "TypeScript",
+      "score": "70%",
+      "namecolor":"#5a68a5",
+      "scorecolor":"#46465e"
+    },
+    {
+      "id": 7,
+      "name": "Angular",
+      "score": "75%",
+      "namecolor":"#333333",
+      "scorecolor":"#525252"
+    },
+    {
+      "id": 8,
+      "name": "Xamarin",
+      "score": "70%",
+      "namecolor":"#27ae60",
+      "scorecolor":"#2ecc71"
+    }
+
+  ]
+
+}
