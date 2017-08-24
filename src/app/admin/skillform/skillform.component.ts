@@ -1,6 +1,8 @@
+import {ActivatedRoute} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Skillbarchart } from '../../shared/skillbarchart';
-
+import { AngularFireDatabase } from 'angularfire2/database';
+import { UUID } from 'angular2-uuid';
 @Component({
   selector: 'app-skillform',
   templateUrl: './skillform.component.html',
@@ -10,7 +12,7 @@ export class SkillformComponent implements OnInit {
 
 
   skillbarchartdata: Skillbarchart;
-  constructor() {
+  constructor(private db: AngularFireDatabase, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -22,8 +24,10 @@ export class SkillformComponent implements OnInit {
       scorecolor: ''
     };
   }
-  onchange(event) {
-    console.log(event);
+
+  onSubmit(f) { console.log(f)
+    f.value.id=UUID.UUID();
+    f.value.score=f.value.score+"%";
+    this.db.object('/skillbarchart/'+f.value.id).set(f.value).then(d=>console.log(d))
   }
-  onSubmit(f) { }
 }
