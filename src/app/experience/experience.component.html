@@ -19,7 +19,11 @@
           </blockquote>
           <section>
             <p *ngIf="item?.detail?.content!=''">{{item?.detail?.content}}</p>
-            <ul class="collapsible popout" data-collapsible="accordion" *ngFor="let detaildata of item?.detail?.detaildata" (click)="detaildata.display=!detaildata.display">
+            <ul class="collapsible popout" data-collapsible="accordion" *ngFor="let detaildata of item?.detail?.detaildata;let i=index" (click)="
+            OnClickCollectionHeader(item?.detail?.detaildata,i)
+
+            ">
+            <!-- detaildata.display=!detaildata.display -->
               <li>
                 <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i> {{detaildata?.name}}
                 </div>

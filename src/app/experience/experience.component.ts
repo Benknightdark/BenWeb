@@ -15,6 +15,13 @@ export class ExperienceComponent implements OnInit {
   ngOnInit() {
     this.experiencedata = this.http.GetDBExperienceData()// this.http.GetExperienceData();
   }
-
+  OnClickCollectionHeader(detaildata, index) {
+    for (let i = 0; i < detaildata.length; i++) {
+      if (i != index && detaildata[i].display) {
+        detaildata[i].display = !detaildata[i].display;
+      }
+    }
+    detaildata[index].display = !detaildata[index].display;
+  }
 
 }
