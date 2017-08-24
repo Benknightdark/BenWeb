@@ -19,11 +19,11 @@
           </blockquote>
           <section>
             <p *ngIf="item?.detail?.content!=''">{{item?.detail?.content}}</p>
-            <ul class="collapsible popout" data-collapsible="accordion" *ngFor="let detaildata of item?.detail?.detaildata">
+            <ul class="collapsible popout" data-collapsible="accordion" *ngFor="let detaildata of item?.detail?.detaildata" (click)="detaildata.display=!detaildata.display">
               <li>
                 <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i> {{detaildata?.name}}
                 </div>
-                <div class="collapsible-body" *ngFor="let detaildatalist of detaildata?.detaildatalist">
+                <div class="collapsible-body" [class.display]='detaildata?.display==true' [class.hide]='detaildata?.display==false' *ngFor="let detaildatalist of detaildata?.detaildatalist">
                   <div *ngIf="detaildatalist?.url!='' ;else elseblock">
                     <a [href]="detaildatalist?.url" target="_blank"><span>{{detaildatalist?.name}}</span></a>
                   </div>

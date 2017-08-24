@@ -15,6 +15,7 @@ export interface ExperienceDataDetail {
 }
 export interface DetailData {
   name: string;
+  display:boolean;
   detaildatalist: DetailDataList;
 }
 export interface DetailDataList {

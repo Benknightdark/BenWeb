@@ -89,3 +89,9 @@
     left: 0;
   }
 }
+.display{
+  display: block;
+}
+.hide{
+  display: none;
+}
