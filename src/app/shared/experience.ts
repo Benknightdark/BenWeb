@@ -1,11 +1,12 @@
 export interface ExperienceData {
+  id: string;
   imgurl: string;
   place: string;
   name: string;
   duration: string;
-  icon:string;
-  iconcolor:string;
-  iconbackground:string;
+  icon: string;
+  iconcolor: string;
+  iconbackground: string;
   detail: ExperienceDataDetail;
 }
 export interface ExperienceDataDetail {

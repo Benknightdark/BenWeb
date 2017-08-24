@@ -57,75 +57,144 @@
 
   ],
   "experiencedata": [{
-    "imgurl": "assets/images/infofab.svg",
-    "place": "華致資訊 (infoFab)",
-    "name": "Project Engineer",
-    "duration": "2015 - Present",
-    "icon":"work",
-    "iconcolor":"white",
-    "iconbackground":"#2196F3",
-    "detail": {
-      "content": "",
-      "detaildata": [{
-          "name": "專案開發",
-          "detaildatalist": [{
-              "name": "etis app (Xamarin＋.Net Web API)",
-              "url": "",
-              "tip": ""
-            },
-            {
-              "name": "機台概況查詢及資料視覺化圖表 (.Net MVC專案)",
-              "url": "",
-              "tip": ""
-            },
-            {
-              "name": "採購及報價單報表輸出 (RDLC+.net WebForm專案)",
-              "url": "",
-              "tip": ""
-            },
-            {
-              "name": "AD Server使用者驗證登入機制 (.Net MVC專案)",
-              "url": "",
-              "tip": ""
-            },
-            {
-              "name": "華泰主檔管理系統 (.Net MVC專案)",
-              "tip": "",
-              "url": ""
-            },
-            {
-              "name": " .Net MVC專案前端及後端錯誤訊息偵測收集模型",
-              "tip": "",
-              "url": ""
-            }
-          ]
+      "id": "1",
+      "imgurl": "assets/images/infofab.svg",
+      "place": "華致資訊 (infoFab)",
+      "name": "Project Engineer",
+      "duration": "2015 - Present",
+      "icon": "work",
+      "iconcolor": "white",
+      "iconbackground": "#2196F3",
+      "detail": {
+        "content": "",
+        "detaildata": [{
+            "name": "專案開發",
+            "detaildatalist": [{
+                "name": "etis app (Xamarin＋.Net Web API)",
+                "url": "",
+                "tip": ""
+              },
+              {
+                "name": "機台概況查詢及資料視覺化圖表 (.Net MVC專案)",
+                "url": "",
+                "tip": ""
+              },
+              {
+                "name": "採購及報價單報表輸出 (RDLC+.net WebForm專案)",
+                "url": "",
+                "tip": ""
+              },
+              {
+                "name": "AD Server使用者驗證登入機制 (.Net MVC專案)",
+                "url": "",
+                "tip": ""
+              },
+              {
+                "name": "華泰主檔管理系統 (.Net MVC專案)",
+                "tip": "",
+                "url": ""
+              },
+              {
+                "name": " .Net MVC專案前端及後端錯誤訊息偵測收集模型",
+                "tip": "",
+                "url": ""
+              }
+            ]
 
-        },
-        {
-          "name": "產品開發",
-          "detaildatalist": [{
-              "name": "資料視覺化共用元件",
-              "url": "",
+          },
+          {
+            "name": "產品開發",
+            "detaildatalist": [{
+                "name": "資料視覺化共用元件",
+                "url": "",
+                "tip": ""
+              },
+              {
+                "name": "ContentWatcher",
+                "tip": "",
+                "url": ""
+              }
+            ]
+          },
+          {
+            "name": "個人專案",
+            "detaildatalist": [{
+              "name": "【 八德文教基金會】官方網站 (Angular4 + FireBase)",
+              "url": "https://eightdweb.firebaseapp.com/",
               "tip": ""
+            }]
+          }
+        ]
+      }
+
+    },
+    {
+      "id": "2",
+      "imgurl": "assets/images/nkfust1.jpg",
+      "place": "高雄第一科技大學 (NKFUST)",
+      "name": "資訊管理系 碩士",
+      "duration": "2013 - 2015",
+      "icon": "language",
+      "iconcolor": "white",
+      "iconbackground": "red",
+      "detail": {
+        "content": "實作實驗室國科計畫系統模型，並撰寫相關技術文件和論文",
+        "detaildata": [{
+          "name": "已發表論文",
+          "detaildatalist": [{
+              "name": "社群媒體智慧整合之研究",
+              "url": "http://www.mis.nkfust.edu.tw/newMis/home/view/1297",
+              "tip": "宋作楠基金會104年度碩士論文獎佳作"
             },
             {
-              "name": "ContentWatcher",
+              "name": "社群媒體智慧整合之研究",
+              "url": "http://www.mis.nkfust.edu.tw/newMis/home/view/1247",
+              "tip": "發表於2015年第一屆台灣社會網絡學會，並獲得碩士論文獎"
+            },
+            {
+              "name": "異質性社群媒體監視器之研究",
+              "url": "",
+              "tip": "發表於2015年第二十六屆國際資訊管理學術研討會"
+            },
+            {
+              "name": "異質性社群媒體事件主題整合平台之研究：以主題圖形模式為例",
+              "url": "",
+              "tip": "發表於2015年第十一屆知識社群國際研討會"
+            },
+            {
+              "name": "異質性社群媒體事件主題整合平台之研究：以多維度表格模式為例",
               "tip": "",
-              "url": ""
+              "url": "發表於2015年生活科技研討會"
+            },
+            {
+              "name": "提供人脈管理之異質性社群整合平台之研究",
+              "tip": "",
+              "url": "發表於2014年第二十五屆國際資訊管理學術研討會"
             }
           ]
-        },
-        {
-          "name": "個人專案",
+        }]
+      }
+    },
+    {
+      "id": "3",
+      "imgurl": "assets/images/nkfust2.jpg",
+      "place": "高雄第一科技大學 (NKFUST)",
+      "name": "資訊管理系 學士",
+      "duration": "2010 - 2013",
+      "icon": "language",
+      "iconcolor": "white",
+      "iconbackground": "red",
+      "detail": {
+        "content": "",
+        "detaildata": [{
+          "name": "工讀經驗",
           "detaildatalist": [{
-            "name": "【 八德文教基金會】官方網站 (Angular4 + FireBase)",
-            "url": "https://eightdweb.firebaseapp.com/",
+            "name": "設計學校各處室的網頁，以及日後的網頁更新與維護工作",
+            "url": "",
             "tip": ""
           }]
-        }
-      ]
+        }]
+      }
     }
-
-  }]
-
+  ]
 }
