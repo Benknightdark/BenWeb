@@ -14,7 +14,10 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { ParallaxComponent } from './shared/parallax/parallax.component';
 import { IndexService } from './services/index.service';
-
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule} from 'angularfire2';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { IndexService } from './services/index.service';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
 
   ],
   providers: [IndexService],

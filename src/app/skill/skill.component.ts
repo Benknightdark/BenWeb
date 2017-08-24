@@ -14,7 +14,7 @@ export class SkillComponent implements OnInit {
   @Input() ScreenWidth;
   chartdata: Observable<Skillbarchart>;
   ngOnInit() {
-    this.chartdata = this.http.GetskillbarchartData();
+    this.chartdata = this.http.GetDBskillbarchartData()//.GetskillbarchartData();
 
 
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { IndexService } from '../services/index.service';
 import { ExperienceData } from '../shared/experience';
 import { Observable } from 'rxjs/Observable';
@@ -13,7 +13,12 @@ export class ExperienceComponent implements OnInit {
   constructor(private http: IndexService) { }
 
   ngOnInit() {
-    this.experiencedata = this.http.GetExperienceData();
+
+      this.experiencedata =this.http.GetDBExperienceData()// this.http.GetExperienceData();
+
+
+    this.http.GetDBExperienceData().subscribe(data=>console.log(data))
+    this.http.GetExperienceData().subscribe(data=>console.log(data));
   }
 
 }

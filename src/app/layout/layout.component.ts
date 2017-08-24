@@ -11,16 +11,8 @@ export class LayoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('.collapsible').collapsible();
-    $('.button-collapse').sideNav({
-      closeOnClick: true,
-      draggable: true
-    });
-    $('.parallax').parallax();
-    $('.slider').slider({
-      height: 1000,
-      indicators: false
-    });
+
+
 
     Observable.fromEvent(window, 'resize')
       .map(() => {
@@ -36,6 +28,23 @@ export class LayoutComponent implements OnInit {
       .subscribe(data => {
         this.ScreenWidth = data;
       });
+  }
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngAfterViewInit() {
+    $('.collapsible').collapsible({
+
+    });
+    $('.button-collapse').sideNav({
+      closeOnClick: true,
+      draggable: true
+    });
+    $('.parallax').parallax();
+    $('.slider').slider({
+      height: 1000,
+      indicators: false
+    });
+
+
   }
 
 }
