@@ -3,8 +3,10 @@ export interface ExperienceData {
   place: string;
   name: string;
   duration: string;
+  icon:string;
+  iconcolor:string;
+  iconbackground:string;
   detail: ExperienceDataDetail;
-
 }
 export interface ExperienceDataDetail {
   content: string;

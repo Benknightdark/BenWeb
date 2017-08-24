@@ -1,6 +1,51 @@
 <app-parallax [title]="'Experience'" [titlecolor]="'white'" [imgurl]="'assets/images/experience.jpeg'"></app-parallax>
 <div class="container" id="experience">
   <div class="timeline">
+    <div class="timeline-event" *ngFor="let item of experiencedata |async">
+      <div class="card timeline-content hoverable tooltipped" data-position="top" data-delay="50" data-tooltip="Click me to see detail.">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" [src]="item?.imgurl">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{item?.place}}<i class="material-icons right">more_vert</i></span>
+          <!-- <p>Content <a href="#">This is a link</a></p> -->
+          <blockquote>
+            <p>{{item?.name}}</p>
+          </blockquote>
+          <small>{{item?.duration}}</small>
+        </div>
+        <div class="card-reveal">
+          <blockquote>
+            <span class="card-title grey-text text-darken-4">Job Detail<i class="material-icons right">close</i></span>
+          </blockquote>
+          <section>
+            <p *ngIf="item?.detail?.content!=''">{{item?.detail?.content}}</p>
+            <ul class="collapsible popout" data-collapsible="accordion" *ngFor="let detaildata of item?.detail?.detaildata">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i> {{detaildata?.name}}
+                </div>
+                <div class="collapsible-body" *ngFor="let detaildatalist of detaildata?.detaildatalist">
+                  <div *ngIf="detaildatalist?.url!='' ;else elseblock">
+                    <a href="detaildatalist?.url" target="_blank"><span>{{detaildatalist?.name}}</span></a>
+                  </div>
+                  <ng-template #elseblock>
+                    {{detaildatalist?.name}}
+                  </ng-template>
+                  <div *ngIf="detaildatalist?.tip!=''">
+                    <blockquote>{{detaildatalist?.tip}}</blockquote>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="timeline-badge" [style.color]="item?.iconcolor" [style.background]="item?.iconbackground"><i class="material-icons">{{item?.icon}}</i></div>
+    </div>
+  </div>
+
+  <div class="timeline">
     <div class="timeline-event">
       <div class="card timeline-content hoverable tooltipped" data-position="top" data-delay="50" data-tooltip="Click me to see detail.">
         <div class="card-image waves-effect waves-block waves-light">
@@ -60,8 +105,9 @@
           </section>
         </div>
       </div>
-      <div class="timeline-badge blue white-text"><i class="material-icons">work</i></div>
+      <div class="timeline-badge" [style.color]="'white'" [style.background]="'#2196F3'"><i class="material-icons">work</i></div>
     </div>
+    <!-- [style.color]="'white'" [style.background]="'#2196F3'" -->
     <div class="timeline-event">
       <div class="card timeline-content hoverable tooltipped" data-position="top" data-delay="50" data-tooltip="Click me to see detail.">
         <div class="card-image waves-effect waves-block waves-light">

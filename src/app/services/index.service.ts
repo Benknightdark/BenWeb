@@ -2,6 +2,7 @@ import {RequestOptions,Http, Headers, Response} from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Skillbarchart } from '../shared/skillbarchart';
+import { ExperienceData } from '../shared/experience';
 
 @Injectable()
 export class IndexService {
@@ -10,5 +11,8 @@ export class IndexService {
   constructor(private http: Http) { }
   GetskillbarchartData(): Observable<Skillbarchart> {
     return this.http.get(this.Host + 'skillbarchart').map(res => res.json());
+  }
+  GetExperienceData(): Observable<ExperienceData>{
+    return this.http.get(this.Host + 'experiencedata').map(res => res.json());
   }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IndexService } from '../services/index.service';
+import { ExperienceData } from '../shared/experience';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-experience',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-
-  constructor() { }
+  experiencedata: Observable<ExperienceData>;
+  constructor(private http: IndexService) { }
 
   ngOnInit() {
+    this.experiencedata = this.http.GetExperienceData();
   }
 
 }
