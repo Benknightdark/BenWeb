@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillformComponent implements OnInit {
 
-  constructor() { }
+  color
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
+  onchange(event){
+    console.log(event)
+  }
 }
