@@ -4,12 +4,14 @@ import { ColorPickerModule } from 'ngx-color-picker';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminlayoutComponent } from './adminlayout/adminlayout.component';
 import { SkillformComponent } from './skillform/skillform.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ColorPickerModule
+    ColorPickerModule,
+    FormsModule
 
   ],
 

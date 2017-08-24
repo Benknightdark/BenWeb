@@ -1,5 +1,5 @@
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpModule} from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -17,7 +17,7 @@ import { IndexService } from './services/index.service';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireModule} from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 import { LoginService } from './services/login.service';
 import { AccountGuard } from './guard/account.guard';
 import { LoginComponent } from './login/login.component';
@@ -44,8 +44,6 @@ import { FormsModule } from '@angular/forms';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     FormsModule
-
-
   ],
   providers: [IndexService, AccountGuard, LoginService],
   bootstrap: [AppComponent]

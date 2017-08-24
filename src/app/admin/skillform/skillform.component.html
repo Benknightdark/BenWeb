@@ -1,2 +1,28 @@
-<input [(colorPicker)]="color" [style.background]="color" (cpInputChange)="color=$event"[cpPosition]="'bottom'"/>
+<div class="row">
+  <h2>營隊活動管理</h2>
+</div>
+<div class="row">
+  <form class="col s12" (ngSubmit)="onSubmit(f)" #f="ngForm">
 
+
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="namecolor">namecolor</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="text" class="validate" name="namecolor" [(ngModel)]="skillbarchartdata.namecolor" required [(colorPicker)]="skillbarchartdata.namecolor"
+          [style.background]="skillbarchartdata.namecolor" (cpInputChange)="skillbarchartdata.namecolor=$event" [cpPosition]="'bottom'">
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+          <label for="barcolor">barcolor</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="text" class="validate" name="barcolor" [(ngModel)]="skillbarchartdata.barcolor" required [(colorPicker)]="skillbarchartdata.barcolor"
+            [style.background]="skillbarchartdata.barcolor" (cpInputChange)="skillbarchartdata.barcolor=$event" [cpPosition]="'bottom'">
+        </div>
+      </div>
+  </form>
+</div>

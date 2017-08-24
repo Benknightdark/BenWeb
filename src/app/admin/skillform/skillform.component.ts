@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Skillbarchart } from '../../shared/skillbarchart';
 
 @Component({
   selector: 'app-skillform',
@@ -7,13 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillformComponent implements OnInit {
 
-  color
+
+  skillbarchartdata: Skillbarchart;
   constructor() {
   }
 
   ngOnInit() {
+    this.skillbarchartdata = {
+      id: '',
+      name: '',
+      score: '',
+      namecolor: '',
+      scorecolor: ''
+    };
   }
-  onchange(event){
-    console.log(event)
+  onchange(event) {
+    console.log(event);
   }
+  onSubmit(f) { }
 }
