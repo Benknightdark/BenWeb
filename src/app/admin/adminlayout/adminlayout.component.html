@@ -1,3 +1,33 @@
-<p>
-  adminlayout works!
-</p>
+<header [class.MobileUI]="ScreenWidth<992" [class.DesktopUI]="ScreenWidth>992">
+  <nav class="top-nav light-blue" role="navigation">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a id="logo-container" class="brand-logo">
+          AdminPlatForm
+          </a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons" style="color: white;">menu</i></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<ul id="nav-mobile" class="side-nav fixed" style="overflow: auto; transform: translateX(0%);">
+  <li>
+    <div class="logo">
+      <div class="background">
+        <img class="responsive-img" src="http://dl.stickershop.line.naver.jp/products/0/0/1/1218851/android/stickers/8886062.png"
+          style="padding-left: 20px">
+      </div>
+    </div>
+  </li>
+  <li><a [routerLink]="['/admin/dashboard']" [routerLinkActive]="'ActiveRoute'"><i class="material-icons" style="margin: 0 5px 0 0;">insert_chart</i>儀表版</a></li>
+  <li><a [routerLink]="['/admin/campuseventmanage']" [routerLinkActive]="'ActiveRoute'"><i class="material-icons" style="margin: 0 5px 0 0;">settings</i>營隊活動管理</a></li>
+  <li><a [routerLink]="['/admin/campusphotosmanage']" [routerLinkActive]="'ActiveRoute'"><i class="material-icons" style="margin: 0 5px 0 0;">settings_applications</i>營隊花絮管理</a></li>
+  <li style="padding-left: 32px;">
+
+    <button type="button" class="waves-effect waves-light btn" (click)="onClick()"><i class="material-icons left">exit_to_app</i>登出</button></li>
+</ul>
+<main [class.MobileUI]="ScreenWidth<992" [class.DesktopUI]="ScreenWidth>992">
+  <div class="container">
+    <router-outlet> </router-outlet>
+  </div>
+</main>

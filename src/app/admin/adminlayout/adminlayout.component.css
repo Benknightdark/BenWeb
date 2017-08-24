@@ -1,0 +1,11 @@
+.MobileUI {
+  padding-left: 0px;
+      padding-right: 0px
+}
+.DesktopUI {
+  padding-left: 200px;
+  padding-right: 0px
+}
+.ActiveRoute{
+background: yellow
+}
