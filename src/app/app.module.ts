@@ -18,7 +18,10 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule} from 'angularfire2';
-
+import { LoginService } from './services/login.service';
+import { AccountGuard } from './guard/account.guard';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,8 @@ import { AngularFireModule} from 'angularfire2';
     SkillComponent,
     ExperienceComponent,
     ContactComponent,
-    ParallaxComponent
+    ParallaxComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +43,11 @@ import { AngularFireModule} from 'angularfire2';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    FormsModule
+
 
   ],
-  providers: [IndexService],
+  providers: [IndexService, AccountGuard, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

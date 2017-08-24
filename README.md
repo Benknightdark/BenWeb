@@ -1,5 +1,6 @@
 # BenWeb Release Note
 ## 2017/8/25 Ready To Do
+- [] add login function
 - [x]建立parallax元件
 - [x]skill bar chart data json 
 - [x]experience data json 
