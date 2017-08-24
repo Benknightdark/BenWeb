@@ -20,7 +20,6 @@ import { IndexService } from './services/index.service';
   declarations: [
     AppComponent,
     LayoutComponent,
-
     NavbarComponent,
     IndexslideComponent,
     AboutmeComponent,
