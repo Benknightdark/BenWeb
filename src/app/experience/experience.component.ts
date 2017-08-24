@@ -10,8 +10,6 @@ export class ExperienceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  //  $('.tooltipped').tooltip({delay: 50});
-  $('.collapsible').collapsible();
   }
 
 }

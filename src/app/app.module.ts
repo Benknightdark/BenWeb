@@ -32,8 +32,7 @@ import { IndexService } from './services/index.service';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    HttpModule,
-    BrowserAnimationsModule
+    HttpModule
 
   ],
   providers: [IndexService],

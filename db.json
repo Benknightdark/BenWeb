@@ -1,61 +1,128 @@
 {
-  "skillbarchart": [
-    {
+  "skillbarchart": [{
       "id": 1,
       "name": ".Net MVC",
       "score": "80%",
-      "namecolor":"#d35400",
-      "scorecolor":"#e67e22"
+      "namecolor": "#d35400",
+      "scorecolor": "#e67e22"
     },
     {
       "id": 2,
       "name": ".Net Web API",
       "score": "70%",
-      "namecolor":"#2980b9",
-      "scorecolor":"#3498db"
+      "namecolor": "#2980b9",
+      "scorecolor": "#3498db"
     },
     {
       "id": 3,
       "name": ".Net core",
       "score": "60%",
-      "namecolor":"#e67e22",
-      "scorecolor":"#e67e22"
+      "namecolor": "#e67e22",
+      "scorecolor": "#e67e22"
     },
     {
       "id": 4,
       "name": "JavaScript",
       "score": "70%",
-      "namecolor":"#2c3e50",
-      "scorecolor":"#2c3e50"
-    },{
+      "namecolor": "#2c3e50",
+      "scorecolor": "#2c3e50"
+    }, {
       "id": 5,
       "name": "jQuery",
       "score": "75%",
-      "namecolor":"#5a68a5",
-      "scorecolor":"#2c3e50"
+      "namecolor": "#5a68a5",
+      "scorecolor": "#2c3e50"
     },
     {
       "id": 6,
       "name": "TypeScript",
       "score": "70%",
-      "namecolor":"#5a68a5",
-      "scorecolor":"#46465e"
+      "namecolor": "#5a68a5",
+      "scorecolor": "#46465e"
     },
     {
       "id": 7,
       "name": "Angular",
       "score": "75%",
-      "namecolor":"#333333",
-      "scorecolor":"#525252"
+      "namecolor": "#333333",
+      "scorecolor": "#525252"
     },
     {
       "id": 8,
       "name": "Xamarin",
       "score": "70%",
-      "namecolor":"#27ae60",
-      "scorecolor":"#2ecc71"
+      "namecolor": "#27ae60",
+      "scorecolor": "#2ecc71"
     }
 
-  ]
+  ],
+  "experiencedata": [{
+    "imgurl": "assets/images/infofab.svg",
+    "place": "華致資訊 (infoFab)",
+    "name": "Project Engineer",
+    "duration": "2015 - Present",
+    "detail": {
+      "content": "",
+      "detaildata": [{
+          "name": "專案開發",
+          "detaildatalist": [{
+              "name": "etis app (Xamarin＋.Net Web API)",
+              "url": "",
+              "tip": ""
+            },
+            {
+              "name": "機台概況查詢及資料視覺化圖表 (.Net MVC專案)",
+              "url": "",
+              "tip": ""
+            },
+            {
+              "name": "採購及報價單報表輸出 (RDLC+.net WebForm專案)",
+              "url": "",
+              "tip": ""
+            },
+            {
+              "name": "AD Server使用者驗證登入機制 (.Net MVC專案)",
+              "url": "",
+              "tip": ""
+            },
+            {
+              "name": "華泰主檔管理系統 (.Net MVC專案)",
+              "tip": "",
+              "url": ""
+            },
+            {
+              "name": " .Net MVC專案前端及後端錯誤訊息偵測收集模型",
+              "tip": "",
+              "url": ""
+            }
+          ]
+
+        },
+        {
+          "name": "產品開發",
+          "detaildatalist": [{
+              "name": "資料視覺化共用元件",
+              "url": "",
+              "tip": ""
+            },
+            {
+              "name": "ContentWatcher",
+              "tip": "",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "name": "個人專案",
+          "detaildatalist": [{
+            "name": "【 八德文教基金會】官方網站 (Angular4 + FireBase)",
+            "url": "https://eightdweb.firebaseapp.com/",
+            "tip": ""
+          }]
+        }
+      ]
+    }
+
+  }]
 
 }
