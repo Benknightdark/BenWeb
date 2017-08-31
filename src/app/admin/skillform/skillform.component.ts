@@ -25,9 +25,10 @@ export class SkillformComponent implements OnInit {
     };
   }
 
-  onSubmit(f) { console.log(f)
-    f.value.id=UUID.UUID();
-    f.value.score=f.value.score+"%";
+  onSubmit(f) {
+    console.log(f)
+    f.value.id= UUID.UUID();
+    f.value.score= f.value.score+"%";
     this.db.object('/skillbarchart/'+f.value.id).set(f.value).then(d=>console.log(d))
   }
 }

@@ -1,0 +1,33 @@
+<table class="highlight bordered responsive-table">
+  <thead>
+    <tr>
+        <th></th>
+        <th>name</th>
+        <th>namecolor</th>
+        <th>score</th>
+        <th>scorecolor</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of chartdata |async">
+      <td>
+          <a class="btn-floating red">
+              <i class="large material-icons">delete</i>
+            </a>
+          <a class="btn-floating green">
+              <i class="large material-icons">mode_edit</i>
+            </a>
+
+              <a class="btn-floating yellow">
+                  <i class="large material-icons">search</i>
+                </a>
+      </td>
+      <td>{{item?.name}}</td>
+      <td>{{item?.namecolor}}</td>
+      <td>{{item?.score}}</td>
+      <td>{{item?.scorecolor}}</td>
+    </tr>
+
+  </tbody>
+</table>
