@@ -1,6 +1,9 @@
 # BenWeb Release Note
+## Ready To Do
+- [] Add SkillChart Management
+- [] Add Experience Management
 ## 2017/8/25 Ready To Do
-- [] add login function
+- [X] add login function
 - [x]建立parallax元件
 - [x]skill bar chart data json 
 - [x]experience data json 
