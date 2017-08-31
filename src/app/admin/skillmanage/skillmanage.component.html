@@ -1,27 +1,34 @@
+
+<div class="row section">
+    <div class="col s12">
+        <a class="waves-effect waves-light btn"
+        [routerLink]="['/admin/skillform/create']"
+        ><i class="material-icons left">add</i>Add Skill</a>
+    </div>
+</div>
 <table class="highlight bordered responsive-table">
   <thead>
     <tr>
-        <th></th>
-        <th>name</th>
-        <th>namecolor</th>
-        <th>score</th>
-        <th>scorecolor</th>
+      <th></th>
+      <th>name</th>
+      <th>namecolor</th>
+      <th>score</th>
+      <th>scorecolor</th>
     </tr>
   </thead>
 
   <tbody>
     <tr *ngFor="let item of chartdata |async">
-      <td>
-          <a class="btn-floating red">
+      <td style="width:150px">
+        <a class="btn-floating red">
               <i class="large material-icons">delete</i>
-            </a>
-          <a class="btn-floating green">
+        </a>
+        <a class="btn-floating green"  [routerLink]="['/admin/skillform/edit',item?.id]">
               <i class="large material-icons">mode_edit</i>
-            </a>
-
-              <a class="btn-floating yellow">
-                  <i class="large material-icons">search</i>
-                </a>
+        </a>
+        <a class="btn-floating yellow" [routerLink]="['/admin/skillform/detail',item?.id]">
+              <i class="large material-icons">search</i>
+        </a>
       </td>
       <td>{{item?.name}}</td>
       <td>{{item?.namecolor}}</td>
