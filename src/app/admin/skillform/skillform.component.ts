@@ -14,15 +14,20 @@ export class SkillformComponent implements OnInit {
 
   skillbarchartdata: Skillbarchart;
   showform: Boolean = false;
+  Disable: Boolean = false;
+  RouteName: String;
+  RouteParm: String;
   constructor(private db: AngularFireDatabase,
     private route: ActivatedRoute,
-    private index: IndexService
+    private index: IndexService,
+    private router:Router
   ) {
   }
 
   ngOnInit() {
     this.route.url.subscribe(p => {
-
+      this.RouteName = p[1].path;
+      this.RouteParm = p[2].path;
       switch (p[1].path) {
         case "create":
 
@@ -34,23 +39,25 @@ export class SkillformComponent implements OnInit {
             scorecolor: ''
           };
           this.showform = true;
+          this.Disable = false;
 
           break;
         case "detail":
 
-          this.index.GetDBskillbarchartDataByID(p[2].path).subscribe(d => {
-           this.skillbarchartdata = d;
-           console.log(this.skillbarchartdata)
-
+          this.index.GetDBskillbarchartDataByID(this.RouteParm).subscribe(d => {
+            this.skillbarchartdata = d;
+            this.Disable = true;
+            console.log(this.skillbarchartdata)
             this.showform = true;
           });
 
           break;
         case "edit":
-          this.index.GetDBskillbarchartDataByID(p[2].path).subscribe(d => {
-            this.skillbarchartdata=d;
+          this.index.GetDBskillbarchartDataByID(this.RouteParm).subscribe(d => {
+            this.skillbarchartdata = d;
             console.log(this.skillbarchartdata)
             this.showform = true;
+            this.Disable = false;
           });
           break;
 
@@ -63,9 +70,17 @@ export class SkillformComponent implements OnInit {
   }
 
   onSubmit(f) {
-    console.log(f)
-    f.value.id = UUID.UUID();
-    f.value.score = f.value.score + "%";
-    this.db.object('/skillbarchart/' + f.value.id).set(f.value).then(d => console.log(d))
+    //console.log(f)
+
+   // f.value.score = f.value.score + "%";
+    if (this.RouteName == 'create') {
+      f.value.id = UUID.UUID();
+      this.db.object('/skillbarchart/' + f.value.id).set(f.value).then(d => console.log(d));
+    }
+    if (this.RouteName == 'edit') {
+      this.db.object('/skillbarchart/' + this.RouteParm).update(f.value).then(d => console.log(d));
+    }
+    this.router.navigate(["admin/skillmanage"])
+
   }
 }

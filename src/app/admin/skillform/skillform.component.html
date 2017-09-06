@@ -8,24 +8,25 @@
         <label for="name">name</label>
       </div>
       <div class="input-field col s12">
-        <input type="text" class="validate" name="name" [(ngModel)]="skillbarchartdata.name" required />
+        <input type="text" class="validate" name="name" [(ngModel)]="skillbarchartdata.name" required [disabled]="Disable" />
       </div>
     </div>
     <div class="row">
-        <div class="input-field col s12">
-          <label for="score">score</label>
-        </div>
-        <div class="input-field col s12">
-          <input type="text" class="validate" name="score" [(ngModel)]="skillbarchartdata.score" required />
-        </div>
+      <div class="input-field col s12">
+        <label for="score">score</label>
       </div>
+      <div class="input-field col s12">
+        <input type="text" class="validate" name="score" [(ngModel)]="skillbarchartdata.score" required [disabled]="Disable" />
+      </div>
+    </div>
     <div class="row">
       <div class="input-field col s12">
         <label for="namecolor">namecolor</label>
       </div>
       <div class="input-field col s12">
         <input type="text" class="validate" name="namecolor" [(ngModel)]="skillbarchartdata.namecolor" required [(colorPicker)]="skillbarchartdata.namecolor"
-          [style.background]="skillbarchartdata.namecolor" (cpInputChange)="skillbarchartdata.namecolor=$event" [cpPosition]="'bottom'">
+          [style.background]="skillbarchartdata.namecolor" (cpInputChange)="skillbarchartdata.namecolor=$event" [cpPosition]="'bottom'"
+          [disabled]="Disable">
       </div>
     </div>
 
@@ -35,12 +36,17 @@
       </div>
       <div class="input-field col s12">
         <input type="text" class="validate" name="scorecolor" [(ngModel)]="skillbarchartdata.scorecolor" required [(colorPicker)]="skillbarchartdata.scorecolor"
-          [style.background]="skillbarchartdata.scorecolor" (cpInputChange)="skillbarchartdata.scorecolor=$event" [cpPosition]="'bottom'">
+          [style.background]="skillbarchartdata.scorecolor" (cpInputChange)="skillbarchartdata.scorecolor=$event" [cpPosition]="'bottom'"
+          [disabled]="Disable">
       </div>
     </div>
-    <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="f['invalid']">
+
+    <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="f['invalid']" *ngIf="RouteName!='detail'">
         送出<i class="material-icons right">send</i>
        </button>
+
+    <a class="btn waves-effect waves-light" [routerLink]="['/admin/skillform/edit',RouteParm]" *ngIf="RouteName=='detail'">
+        <i class="material-icons left">edit</i>編輯</a>
     <a class="btn waves-effect waves-light" [routerLink]="['/admin/skillmanage']">
         <i class="material-icons left">cancel</i>返回</a>
   </form>
