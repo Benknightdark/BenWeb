@@ -19,6 +19,9 @@ export class IndexService {
   GetDBExperienceData(): Observable<ExperienceData> {
     return this.db.list('/experiencedata').share();
   }
+  GetDBskillbarchartDataByID(id: String): Observable<Skillbarchart> {
+    return this.db.object('/skillbarchart/' + id).share();
+  }
   GetDBskillbarchartData(): Observable<Skillbarchart> {
     return this.db.list('/skillbarchart').share();
   }

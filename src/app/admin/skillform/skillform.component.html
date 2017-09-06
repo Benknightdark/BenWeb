@@ -2,7 +2,7 @@
   <h2>SkillForm</h2>
 </div>
 <div class="row">
-  <form class="col s12" (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <form class="col s12" (ngSubmit)="onSubmit(f)" #f="ngForm" *ngIf="showform">
     <div class="row">
       <div class="input-field col s12">
         <label for="name">name</label>
