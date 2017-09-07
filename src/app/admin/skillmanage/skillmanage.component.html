@@ -20,7 +20,7 @@
   <tbody>
     <tr *ngFor="let item of chartdata |async">
       <td style="width:150px">
-        <a class="btn-floating red">
+        <a class="btn-floating red" (click)="DeleteSkillData(item?.id)">
               <i class="large material-icons">delete</i>
         </a>
         <a class="btn-floating green"  [routerLink]="['/admin/skillform/edit',item?.id]">

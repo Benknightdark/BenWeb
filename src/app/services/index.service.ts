@@ -22,6 +22,9 @@ export class IndexService {
   GetDBskillbarchartDataByID(id: String): Observable<Skillbarchart> {
     return this.db.object('/skillbarchart/' + id).share();
   }
+  DeleteDBskillbarchartDataByID(id: String) {
+    this.db.object('/skillbarchart/' + id).remove().then(a => console.log(a)).catch(e => console.log(e));
+  }
   GetDBskillbarchartData(): Observable<Skillbarchart> {
     return this.db.list('/skillbarchart').share();
   }

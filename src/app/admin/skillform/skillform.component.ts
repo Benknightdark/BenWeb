@@ -20,14 +20,19 @@ export class SkillformComponent implements OnInit {
   constructor(private db: AngularFireDatabase,
     private route: ActivatedRoute,
     private index: IndexService,
-    private router:Router
+    private router: Router
   ) {
   }
 
   ngOnInit() {
     this.route.url.subscribe(p => {
+      console.log(p)
       this.RouteName = p[1].path;
-      this.RouteParm = p[2].path;
+      if (p.length > 2) {
+        this.RouteParm = p[2].path;
+      }
+      // this.RouteName = p[1].path;
+
       switch (p[1].path) {
         case "create":
 
@@ -72,7 +77,7 @@ export class SkillformComponent implements OnInit {
   onSubmit(f) {
     //console.log(f)
 
-   // f.value.score = f.value.score + "%";
+    // f.value.score = f.value.score + "%";
     if (this.RouteName == 'create') {
       f.value.id = UUID.UUID();
       this.db.object('/skillbarchart/' + f.value.id).set(f.value).then(d => console.log(d));
