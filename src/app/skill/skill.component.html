@@ -18,8 +18,8 @@
             <div class="skillbar-title" [style.background]="item?.namecolor">
               <span>{{item?.name}}</span>
             </div>
-            <div class="skillbar-bar" [style.background]="item?.scorecolor" [style.width]="item?.score"></div>
-            <div class="skill-bar-percent">{{item?.score}}</div>
+            <div class="skillbar-bar" [style.background]="item?.scorecolor" [style.width]="item?.score+'%'"></div>
+            <div class="skill-bar-percent">{{item?.score+"%"}}</div>
           </div>
         </div>
       </div>
