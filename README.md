@@ -1,6 +1,6 @@
 # BenWeb Release Note
 ## Ready To Do
-- [] Add SkillChart Management
+- [x] Add SkillChart Management
 - [] Add Experience Management
 ## 2017/8/25 Ready To Do
 - [X] add login function
