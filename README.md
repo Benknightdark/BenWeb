@@ -2,7 +2,7 @@
 ## Ready To Do
 - [x] Add SkillChart Management
 - [] Add Experience Management
-## 2017/8/25 Ready To Do
+## 2017/8/25 Done
 - [X] add login function
 - [x]建立parallax元件
 - [x]skill bar chart data json 
