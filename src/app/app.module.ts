@@ -22,6 +22,7 @@ import { LoginService } from './services/login.service';
 import { AccountGuard } from './guard/account.guard';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,

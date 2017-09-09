@@ -7,6 +7,7 @@ import { SkillformComponent } from './skillform/skillform.component';
 import { FormsModule } from '@angular/forms';
 import { SkillmanageComponent } from './skillmanage/skillmanage.component';
 import {IndexService} from '../services/index.service';
+import { ExperiencemanageComponent } from './experiencemanage/experiencemanage.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import {IndexService} from '../services/index.service';
   ],
  // providers: [IndexService],
 
-  declarations: [AdminlayoutComponent, SkillformComponent, SkillmanageComponent]
+  declarations: [AdminlayoutComponent, SkillformComponent, SkillmanageComponent, ExperiencemanageComponent]
 })
 export class AdminModule { }

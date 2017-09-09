@@ -1,0 +1,76 @@
+<div class="container" >
+
+  <div class="timeline">
+    <div class="timeline-event" *ngFor="let item of experiencedata">
+      <div class="card timeline-content hoverable tooltipped" data-position="top" data-delay="50" data-tooltip="Click me to see detail.">
+        <!-- card image -->
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" [src]="item?.imgurl">
+        </div>
+        <!-- card content -->
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4"> <i class="material-icons right">more_vert</i>
+          </span>
+
+          <input type="text" [(value)]="item.place" (change)="OnValueChange()">
+          <blockquote>
+            <input type="text" [(value)]="item.name" (change)="OnValueChange()">
+            <!-- <p>{{item?.name}}</p> -->
+          </blockquote>
+
+          <small>
+              <input type="text" [(value)]="item.duration" (change)="OnValueChange()">
+
+          </small>
+          <!-- <small>{{item?.duration}}</small> -->
+        </div>
+        <!-- card detail -->
+        <div class="card-reveal">
+          <blockquote>
+            <span class="card-title grey-text text-darken-4">Job Detail<i class="material-icons right">close</i></span>
+          </blockquote>
+          <section>
+
+            <input type="text" [(value)]="item.detail.content" placeholder="工作明細內容">
+            <ul class="collapsible" *ngFor="let detaildata of item?.detail?.detaildata;let i=index" (click)="
+            OnClickCollectionHeader(item?.detail?.detaildata,i)
+            ">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                  <input type="text" name="" [(value)]="detaildata.name"
+                  (change)="OnValueChange()"
+                  >
+                  <!-- {{detaildata?.name}} -->
+                </div>
+                <div class="collapsible-body" [class.display]='detaildata?.display==true' [class.hide]='detaildata?.display==false' *ngFor="let detaildatalist of detaildata?.detaildatalist">
+                  <div *ngIf="detaildatalist?.url!='' ;else elseblock">
+
+                      <input type="text" name="" [(value)]="detaildatalist.name" placeholder="name">
+                      <input type="text" name="" [(value)]="detaildatalist.url"
+                      placeholder="url"
+
+                      (change)="OnValueChange()">
+                  </div>
+                  <ng-template #elseblock>
+                      <input type="text" name="" [(value)]="detaildatalist.name"
+                      (change)="OnValueChange()"
+                      placeholder="name"
+                      >
+                  </ng-template>
+                  <div *ngIf="detaildatalist?.tip!=''">
+
+                    <blockquote><input type="text" name="" [(value)]="detaildatalist.tip"
+                      (change)="OnValueChange()" placeholder="tip"></blockquote>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="timeline-badge" [style.color]="item?.iconcolor" [style.background]="item?.iconbackground"><i class="material-icons">{{item?.icon}}</i></div>
+    </div>
+  </div>
+</div>
+
+
