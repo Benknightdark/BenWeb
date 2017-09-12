@@ -3,8 +3,10 @@
   "short_name": "BenWeb",
   "start_url": "/index.html",
   "display": "standalone",
+  "scope": ".",
   "background_color": "#3E4EB8",
   "theme_color": "#2F3BA2",
+  "orientation": "portrait"  ,
   "icons": [{
     "src": "images/icons/icon-128x128.png",
       "sizes": "128x128",
@@ -25,5 +27,5 @@
       "src": "images/icons/icon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
-    }],
+    }]
 }
