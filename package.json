@@ -27,7 +27,7 @@
     "angularfire2": "^4.0.0-rc.2",
     "core-js": "^2.4.1",
     "firebase": "^4.3.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.1",
     "materialize-css": "^0.100.1",
     "materialize-social": "^1.0.0",
     "ngx-color-picker": "^4.3.1",
@@ -52,7 +52,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
-    "tslint": "~5.3.2",
+    "tslint": "^5.20.1",
     "typescript": "~2.3.3"
   }
 }

@@ -1,5 +1,5 @@
 {
   "projects": {
-    "prod": "benweb-c6aee"
+    "default": "benwebknight"
   }
 }
